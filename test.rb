@@ -14,23 +14,21 @@ questions = []
 
 results = []
 
-if File.exist?('./questions.txt') # проверяем есть ли файл со лбами
-  f = File.new('./questions.txt', "r:UTF-8") # открываем файл, явно указывая его кодировку
+if File.exist?('./data/questions.txt') # Проверяем, есть ли файл
+  f = File.new('./data/questions.txt', "r:UTF-8") # открываем файл, явно указывая его кодировку
   questions = f.readlines   # читаем все строки в массив
   f.close # закрываем файл
 else
   puts 'questions не найдены'
 end
 
-if File.exist?('./results.txt') # проверяем есть ли файл со лбами
-  f = File.new('./results.txt', "r:UTF-8") # открываем файл, явно указывая его кодировку
+if File.exist?('./data/results.txt') # Проверяем, есть ли файл
+  f = File.new('./data/results.txt', "r:UTF-8") # открываем файл, явно указывая его кодировку
   results = f.readlines   # читаем все строки в массив
   f.close # закрываем файл
 else
   puts 'results не найдены'
 end
-
-
 
 yes_answers = 0
 
